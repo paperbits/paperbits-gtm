@@ -1,6 +1,6 @@
 {
     "name": "@paperbits/gtm",
-    "version": "0.1.218",
+    "version": "0.1.219",
     "description": "Google Tag Manager library for Paperbits components.",
     "license": "MIT",
     "author": "Paperbits",
@@ -13,6 +13,6 @@
         "google-tag-manager"
     ],
     "dependencies": {
-        "@paperbits/common": "0.1.218"
+        "@paperbits/common": "0.1.219"
     }
 }

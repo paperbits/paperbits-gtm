@@ -8,9 +8,12 @@ export class GoogleTagManagerHtmlPagePublisherPlugin implements HtmlPagePublishe
     public async apply(document: Document): Promise<void> {
         const settings = await this.siteService.getSiteSettings();
 
-        if (!settings?.integration?.googleTagManager?.containerId) {
+        if (!settings?.integration?.googleTagManager) {
             return;
         }
+
+        const gtmSettings = settings.integration.googleTagManager;
+        const containerId = gtmSettings.webContainerId || gtmSettings.containerId;
 
         const headScriptElement = document.createElement("script");
 

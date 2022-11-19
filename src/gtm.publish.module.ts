@@ -16,6 +16,6 @@ import { GoogleTagManagerHtmlPagePublisherPlugin } from "./publishing";
  */
 export class GoogleTagManagerPublishModule implements IInjectorModule {
     public register(injector: IInjector): void {
-        injector.bindToCollection("htmlPagePublisherPlugins", GoogleTagManagerHtmlPagePublisherPlugin);
+        injector.bindToCollectionAsSingletone("htmlPagePublisherPlugins", GoogleTagManagerHtmlPagePublisherPlugin);
     }
 }
